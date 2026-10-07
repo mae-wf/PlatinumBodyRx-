@@ -11,26 +11,36 @@
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#0b0f17',
-                        cardBg: '#131c2a',
-                        metallicSilver: '#d1d5db',
-                        chromeBright: '#f3f4f6',
-                        accentBlue: '#1e40af',
-                        accentHover: '#1d4ed8'
+                        darkBg: '#0e141f',
+                        cardBg: '#151f30',
+                        metallicSilver: '#d8dee9',
+                        chromeBright: '#ffffff',
+                        accentBlue: '#1a365d',
+                        accentHover: '#224275',
+                        brandBlue: '#3b82f6'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-darkBg text-metallicSilver font-sans antialiased selection:bg-accentBlue selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-darkBg text-metallicSilver font-sans antialiased selection:bg-brandBlue selection:text-white min-h-screen flex flex-col justify-between">
 
     <!-- Sticky Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-gray-800">
+    <header class="sticky top-0 z-50 bg-darkBg/95 backdrop-blur-md border-b border-gray-800/80 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo / Name -->
-            <a href="#" class="text-2xl font-black tracking-wider text-chromeBright uppercase flex items-center gap-2">
-                Platinum<span class="text-blue-500">Body</span>Rx
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 border border-gray-600 flex items-center justify-center shadow-inner overflow-hidden">
+                    <!-- Logo Icon placeholder matching your metallic branding style -->
+                    <span class="text-white font-black text-lg tracking-tighter">P</span><span class="text-blue-400 font-black text-lg">X</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-wider text-chromeBright uppercase leading-none">
+                        Platinum<span class="text-blue-400">Body</span>Rx
+                    </span>
+                    <span class="text-[9px] tracking-widest text-gray-400 uppercase font-semibold mt-1">Strength. Health. Performance.</span>
+                </div>
             </a>
 
             <!-- Desktop Nav Links -->
@@ -42,7 +52,7 @@
             </nav>
 
             <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 text-chromeBright focus:outline-none focus:ring-2 focus:ring-accentBlue">
+            <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 text-chromeBright focus:outline-none focus:ring-2 focus:ring-brandBlue">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -50,7 +60,7 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-gray-800 px-6 py-6 space-y-4">
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-gray-800 px-6 py-6 space-y-4 shadow-xl">
             <a href="#hairloss" class="mobile-link block text-lg font-semibold uppercase hover:text-chromeBright transition-colors">Hairloss</a>
             <a href="#mens-health" class="mobile-link block text-lg font-semibold uppercase hover:text-chromeBright transition-colors">Mens Health</a>
             <a href="#peptides" class="mobile-link block text-lg font-semibold uppercase hover:text-chromeBright transition-colors">Peptides</a>
@@ -70,7 +80,7 @@
                 Elite telehealth solutions engineered for peak physical optimization and vitality.
             </p>
             <div class="pt-4">
-                <a href="#hairloss" class="inline-block bg-accentBlue hover:bg-accentHover text-white font-bold px-8 py-4 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-blue-900/30">
+                <a href="#hairloss" class="inline-block bg-accentBlue hover:bg-accentHover text-white font-bold px-8 py-4 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-blue-950/50 border border-blue-500/20">
                     Explore Catalog
                 </a>
             </div>
@@ -85,30 +95,29 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Product Card 1 -->
-                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group">
+                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group shadow-md">
                     <div>
                         <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-gray-800 flex items-center justify-center">
-                            <!-- Replace src with your image file path or URL later -->
-                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=500" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=500" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
                         </div>
                         <h3 class="text-lg font-bold text-chromeBright uppercase">Topical Finasteride / Minoxidil</h3>
                         <p class="text-blue-400 font-semibold mt-1">$65 / mo</p>
                     </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider">
+                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/20">
                         View & Order
                     </span>
                 </a>
 
                 <!-- Product Card 2 -->
-                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group">
+                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group shadow-md">
                     <div>
                         <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-gray-800 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=500" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=500" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
                         </div>
                         <h3 class="text-lg font-bold text-chromeBright uppercase">Ketoconazole Clinical Shampoo</h3>
                         <p class="text-blue-400 font-semibold mt-1">$35 / mo</p>
                     </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider">
+                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/20">
                         View & Order
                     </span>
                 </a>
@@ -124,29 +133,29 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Product Card -->
-                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group">
+                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group shadow-md">
                     <div>
                         <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-gray-800 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&q=80&w=500" alt="Testosterone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&q=80&w=500" alt="Testosterone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
                         </div>
                         <h3 class="text-lg font-bold text-chromeBright uppercase">Testosterone Protocol</h3>
                         <p class="text-blue-400 font-semibold mt-1">$100 / mo</p>
                     </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider">
+                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/20">
                         View & Order
                     </span>
                 </a>
 
                 <!-- Product Card -->
-                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group">
+                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group shadow-md">
                     <div>
                         <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-gray-800 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=500" alt="Enclomiphene" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=500" alt="Enclomiphene" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
                         </div>
                         <h3 class="text-lg font-bold text-chromeBright uppercase">Enclomiphene Therapy</h3>
                         <p class="text-blue-400 font-semibold mt-1">$120 / mo</p>
                     </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider">
+                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/20">
                         View & Order
                     </span>
                 </a>
@@ -162,15 +171,15 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Product Card -->
-                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group">
+                <a href="https://example.com/checkout" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-gray-800 rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/50 transition-all group shadow-md">
                     <div>
                         <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-gray-800 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&q=80&w=500" alt="BPC-157" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&q=80&w=500" alt="BPC-157" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
                         </div>
                         <h3 class="text-lg font-bold text-chromeBright uppercase">BPC-157 Recovery Blend</h3>
                         <p class="text-blue-400 font-semibold mt-1">$150 / mo</p>
                     </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider">
+                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/20">
                         View & Order
                     </span>
                 </a>
@@ -178,7 +187,7 @@
         </section>
 
         <!-- How to Order Section -->
-        <section id="how-to-order" class="space-y-8 scroll-mt-28 bg-cardBg border border-gray-800 rounded-2xl p-8 sm:p-12">
+        <section id="how-to-order" class="space-y-8 scroll-mt-28 bg-cardBg border border-gray-800 rounded-2xl p-8 sm:p-12 shadow-xl">
             <div class="max-w-2xl">
                 <h2 class="text-2xl sm:text-3xl font-bold uppercase text-chromeBright tracking-wide">How to Order</h2>
                 <p class="text-gray-400 mt-2">Simple, streamlined intake process designed to get you started quickly.</p>
@@ -186,24 +195,24 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
                 <div class="bg-darkBg p-6 rounded-xl border border-gray-800 space-y-3">
-                    <span class="text-blue-500 font-black text-xl">01</span>
+                    <span class="text-blue-400 font-black text-xl">01</span>
                     <h3 class="text-lg font-bold text-chromeBright uppercase">Select Your Protocol</h3>
                     <p class="text-sm text-gray-400">Browse our product categories and choose the regimen that aligns with your goals.</p>
                 </div>
                 <div class="bg-darkBg p-6 rounded-xl border border-gray-800 space-y-3">
-                    <span class="text-blue-500 font-black text-xl">02</span>
+                    <span class="text-blue-400 font-black text-xl">02</span>
                     <h3 class="text-lg font-bold text-chromeBright uppercase">Complete Intake</h3>
                     <p class="text-sm text-gray-400">Fill out the required medical history and documentation securely online.</p>
                 </div>
                 <div class="bg-darkBg p-6 rounded-xl border border-gray-800 space-y-3">
-                    <span class="text-blue-500 font-black text-xl">03</span>
+                    <span class="text-blue-400 font-black text-xl">03</span>
                     <h3 class="text-lg font-bold text-chromeBright uppercase">Consult & Ship</h3>
                     <p class="text-sm text-gray-400">Review with a licensed clinician and have your prescription shipped directly.</p>
                 </div>
             </div>
 
             <div class="pt-4 text-center">
-                <a href="https://example.com/intake" target="_blank" rel="noopener noreferrer" class="inline-block bg-accentBlue hover:bg-accentHover text-white font-bold px-8 py-4 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-blue-900/30">
+                <a href="https://example.com/intake" target="_blank" rel="noopener noreferrer" class="inline-block bg-accentBlue hover:bg-accentHover text-white font-bold px-8 py-4 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-blue-950/50 border border-blue-500/20">
                     Start Intake Portal
                 </a>
             </div>
