@@ -24,13 +24,37 @@
             }
         }
     </script>
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 20s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 <body class="bg-darkBg text-metallicSilver font-sans antialiased selection:bg-brandBlue selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Top Animated Ticker Bar -->
+    <div class="bg-blue-600/90 text-white text-xs font-bold tracking-widest uppercase py-2 overflow-hidden whitespace-nowrap border-b border-blue-400/30">
+        <div class="animate-marquee flex items-center gap-8">
+            <span class="flex items-center gap-3">Hair loss &bull; Testosterone &bull; Peptides</span>
+            <span class="flex items-center gap-3">&bull; Elite Telehealth Protocols &bull;</span>
+            <span class="flex items-center gap-3">Hair loss &bull; Testosterone &bull; Peptides</span>
+            <span class="flex items-center gap-3">&bull; Elite Telehealth Protocols &bull;</span>
+        </div>
+    </div>
 
     <!-- Sticky Header & Navigation -->
     <header class="sticky top-0 z-50 bg-[#0b1017]/95 backdrop-blur-md border-b border-steelBorder shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo & Name (Fixed Logo Integration with Soft Glow & Square Aspect) -->
+            <!-- Brand Logo & Name (Fixed Logo Integration) -->
             <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group">
                 <div class="w-12 h-12 rounded-xl bg-[#0b1017] border border-steelBorder/80 flex items-center justify-center shadow-inner overflow-hidden p-0.5">
                     <img src="Screenshot_20261007_174531_Gallery.jpg" alt="PlatinumBodyRx Logo" class="w-full h-full object-cover rounded-lg filter contrast-125 brightness-110">
