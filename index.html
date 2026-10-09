@@ -3,256 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlatinumBodyRx | Strength. Health. Performance.</title>
-    <!-- Tailwind CSS CDN -->
+    <title>PlatinumBodyRx | Strength, Health, Performance</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        darkBg: '#0b1017',
-                        cardBg: '#121a26',
-                        metallicSilver: '#d8dee9',
-                        chromeBright: '#ffffff',
-                        accentBlue: '#162d4a',
-                        accentHover: '#1e3a5f',
-                        brandBlue: '#3b82f6',
-                        steelBorder: '#23324a'
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b0f19; color: #f3f4f6; }
+    </style>
 </head>
-<body class="bg-darkBg text-metallicSilver font-sans antialiased selection:bg-brandBlue selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
 
-    <!-- Sticky Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-[#0b1017]/95 backdrop-blur-md border-b border-steelBorder shadow-xl">
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#0b0f19]/90 backdrop-blur-md border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo & Name -->
-            <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group">
-                <div class="w-12 h-12 rounded-xl bg-[#0b1017] border border-steelBorder/80 flex items-center justify-center shadow-inner overflow-hidden p-0.5">
-                    <img src="Screenshot_20261007_174531_Gallery.jpg" alt="PlatinumBodyRx Logo" class="w-full h-full object-cover rounded-lg filter contrast-125 brightness-110">
+            <!-- Logo linking to top -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-900 flex items-center justify-center border border-blue-500/30 shadow-lg shadow-blue-500/10 group-hover:border-blue-400 transition-all">
+                    <span class="text-xl font-bold text-white tracking-wider">P</span>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-xl font-extrabold tracking-wider text-chromeBright uppercase leading-none">
-                        Platinum<span class="text-blue-400">Body</span>Rx
-                    </span>
-                    <span class="text-[9px] tracking-widest text-gray-400 uppercase font-semibold mt-1">Strength. Health. Performance.</span>
+                    <span class="text-lg font-bold tracking-wider text-white">PLATINUM<span class="text-blue-500">BODY</span>RX</span>
+                    <span class="text-[10px] tracking-widest text-gray-400 uppercase">Strength. Health. Performance.</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide uppercase">
-                <a href="#hairloss" class="hover:text-chromeBright transition-colors">Hairloss</a>
-                <a href="#mens-health" class="hover:text-chromeBright transition-colors">Mens Health</a>
-                <a href="#peptides" class="hover:text-chromeBright transition-colors">Peptides</a>
-                <a href="#how-to-order" class="text-blue-400 hover:text-blue-300 transition-colors">How to Order</a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#peptides" class="hover:text-blue-400 transition-colors">Peptides</a>
+                <a href="#mens-health" class="hover:text-blue-400 transition-colors">Men's Health</a>
+                <a href="#hairloss" class="hover:text-blue-400 transition-colors">Hairloss treatment</a>
+                <a href="#how-to-order" class="hover:text-blue-400 transition-colors">How to order</a>
             </nav>
 
-            <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 text-chromeBright focus:outline-none focus:ring-2 focus:ring-brandBlue">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <!-- Actions -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-all shadow-lg shadow-blue-600/20">
+                    Patient Portal
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-800/60 focus:outline-none" aria-label="Toggle Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
 
-        <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-steelBorder px-6 py-6 space-y-4 shadow-xl">
-            <a href="#hairloss" class="mobile-link block text-lg font-semibold uppercase hover:text-chromeBright transition-colors">Hairloss</a>
-            <a href="#mens-health" class="mobile-link block text-lg font-semibold uppercase hover:text-chromeBright transition-colors">Mens Health</a>
-            <a href="#peptides" class="mobile-link block text-lg font-semibold uppercase hover:text-chromeBright transition-colors">Peptides</a>
-            <a href="#how-to-order" class="mobile-link block text-lg font-semibold uppercase text-blue-400 hover:text-blue-300 transition-colors">How to Order</a>
+        <!-- Mobile Menu (Reordered explicitly as requested) -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-gray-800 bg-[#0b0f19]/95 px-4 pt-2 pb-6 space-y-3">
+            <a href="#peptides" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white">Peptides</a>
+            <a href="#mens-health" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white">Men's Health</a>
+            <a href="#hairloss" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white">Hairloss treatment</a>
+            <a href="#how-to-order" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white">How to order</a>
+            <div class="pt-2">
+                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" class="block text-center w-full py-3 rounded-xl bg-blue-600 text-white font-medium shadow-lg shadow-blue-600/20">
+                    Patient Portal
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24 w-full">
-
-        <!-- Hero Section -->
-        <section class="text-center space-y-6 py-12 bg-gradient-to-b from-cardBg/50 to-transparent border border-steelBorder/40 rounded-3xl p-8 sm:p-16 shadow-2xl">
-            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-chromeBright uppercase">
-                Strength. Health. Performance.
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 lg:py-32 border-b border-gray-800/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span>Elite Clinical Protocols</span>
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                STRENGTH. HEALTH. PERFORMANCE.
             </h1>
-            <p class="max-w-2xl mx-auto text-lg text-gray-400">
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
                 Elite telehealth solutions engineered for peak physical optimization and vitality.
             </p>
-            <div class="pt-4">
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="inline-block bg-accentBlue hover:bg-accentHover text-white font-bold px-8 py-4 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-blue-950/50 border border-blue-500/30">
-                    Explore Catalog
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <!-- Smooth scrolls down to catalog instead of external link -->
+                <a href="#catalog" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-all shadow-xl shadow-blue-600/20 text-center">
+                    EXPLORE CATALOG
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Hairloss Section -->
-        <section id="hairloss" class="space-y-8 scroll-mt-28">
-            <div class="border-b border-steelBorder pb-4">
-                <h2 class="text-2xl sm:text-3xl font-bold uppercase text-chromeBright tracking-wide">Hairloss Solutions</h2>
-                <p class="text-sm text-gray-400 mt-1">Advanced protocols for density and maintenance.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Finasteride Card -->
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-steelBorder rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/60 transition-all group shadow-md">
-                    <div>
-                        <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-steelBorder flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=500" alt="Finasteride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
-                        </div>
-                        <h3 class="text-lg font-bold text-chromeBright uppercase">Finasteride</h3>
-                        <p class="text-blue-400 font-semibold mt-1">Starting at $52/mo</p>
-                    </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/30">
-                        View & Order
-                    </span>
-                </a>
-
-                <!-- Oral Minoxidil Card -->
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-steelBorder rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/60 transition-all group shadow-md">
-                    <div>
-                        <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-steelBorder flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&q=80&w=500" alt="Oral Minoxidil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
-                        </div>
-                        <h3 class="text-lg font-bold text-chromeBright uppercase">Oral Minoxidil</h3>
-                        <p class="text-blue-400 font-semibold mt-1">Starting at $29/mo</p>
-                    </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/30">
-                        View & Order
-                    </span>
-                </a>
-
-                <!-- Dutasteride Card -->
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-steelBorder rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/60 transition-all group shadow-md">
-                    <div>
-                        <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-steelBorder flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&q=80&w=500" alt="Dutasteride" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
-                        </div>
-                        <h3 class="text-lg font-bold text-chromeBright uppercase">Dutasteride</h3>
-                        <p class="text-blue-400 font-semibold mt-1">Starting at $99/mo</p>
-                    </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/30">
-                        View & Order
-                    </span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Mens Health Section -->
-        <section id="mens-health" class="space-y-8 scroll-mt-28">
-            <div class="border-b border-steelBorder pb-4">
-                <h2 class="text-2xl sm:text-3xl font-bold uppercase text-chromeBright tracking-wide">Mens Health</h2>
-                <p class="text-sm text-gray-400 mt-1">Hormone optimization and longevity support.</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Product Card -->
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-steelBorder rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/60 transition-all group shadow-md">
-                    <div>
-                        <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-steelBorder flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&q=80&w=500" alt="Testosterone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
-                        </div>
-                        <h3 class="text-lg font-bold text-chromeBright uppercase">Testosterone Protocol</h3>
-                        <p class="text-blue-400 font-semibold mt-1">$100 / mo</p>
-                    </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/30">
-                        View & Order
-                    </span>
-                </a>
-
-                <!-- Product Card -->
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-steelBorder rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/60 transition-all group shadow-md">
-                    <div>
-                        <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-steelBorder flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1550572017-edd951b55104?auto=format&fit=crop&q=80&w=500" alt="Enclomiphene" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
-                        </div>
-                        <h3 class="text-lg font-bold text-chromeBright uppercase">Enclomiphene Therapy</h3>
-                        <p class="text-blue-400 font-semibold mt-1">$120 / mo</p>
-                    </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/30">
-                        View & Order
-                    </span>
-                </a>
-            </div>
-        </section>
-
+    <!-- Catalog Section -->
+    <main id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-grow space-y-24">
+        
         <!-- Peptides Section -->
-        <section id="peptides" class="space-y-8 scroll-mt-28">
-            <div class="border-b border-steelBorder pb-4">
-                <h2 class="text-2xl sm:text-3xl font-bold uppercase text-chromeBright tracking-wide">Peptides</h2>
-                <p class="text-sm text-gray-400 mt-1">Targeted recovery, cellular repair, and performance.</p>
+        <div id="peptides" class="space-y-8 scroll-mt-28">
+            <div class="border-b border-gray-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Peptides</h2>
+                <p class="text-sm text-gray-400 mt-1">Advanced recovery, body composition, and performance compounds.</p>
             </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Product Card -->
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="bg-cardBg border border-steelBorder rounded-xl p-5 flex flex-col justify-between hover:border-blue-500/60 transition-all group shadow-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500/50 transition-all">
                     <div>
-                        <div class="bg-darkBg aspect-square rounded-lg mb-4 overflow-hidden border border-steelBorder flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&q=80&w=500" alt="BPC-157" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 text-xs font-semibold">Peptide Protocol</span>
+                            <!-- Updated price string to "Starting at" -->
+                            <span class="text-lg font-bold text-white">Starting at $150<span class="text-xs text-gray-400 font-normal">/mo</span></span>
                         </div>
-                        <h3 class="text-lg font-bold text-chromeBright uppercase">BPC-157 Recovery Blend</h3>
-                        <p class="text-blue-400 font-semibold mt-1">$150 / mo</p>
+                        <h3 class="text-xl font-semibold text-white mb-2">BPC-157 / TB-500 Blend</h3>
+                        <p class="text-sm text-gray-400 mb-6">Synergistic healing protocol optimized for systemic tissue repair, joint recovery, and tendon reinforcement.</p>
                     </div>
-                    <span class="mt-6 w-full bg-accentBlue group-hover:bg-accentHover text-white text-center font-semibold py-3 rounded-lg transition-colors text-sm uppercase tracking-wider border border-blue-500/30">
-                        View & Order
-                    </span>
-                </a>
-            </div>
-        </section>
-
-        <!-- How to Order Section -->
-        <section id="how-to-order" class="space-y-8 scroll-mt-28 bg-cardBg border border-steelBorder rounded-2xl p-8 sm:p-12 shadow-xl">
-            <div class="max-w-2xl">
-                <h2 class="text-2xl sm:text-3xl font-bold uppercase text-chromeBright tracking-wide">How to Order</h2>
-                <p class="text-gray-400 mt-2">Simple, streamlined intake process designed to get you started quickly.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-                <div class="bg-darkBg p-6 rounded-xl border border-steelBorder space-y-3">
-                    <span class="text-blue-400 font-black text-xl">01</span>
-                    <h3 class="text-lg font-bold text-chromeBright uppercase">Select Your Protocol</h3>
-                    <p class="text-sm text-gray-400">Browse our product categories and choose the regimen that aligns with your goals.</p>
-                </div>
-                <div class="bg-darkBg p-6 rounded-xl border border-steelBorder space-y-3">
-                    <span class="text-blue-400 font-black text-xl">02</span>
-                    <h3 class="text-lg font-bold text-chromeBright uppercase">Complete Intake</h3>
-                    <p class="text-sm text-gray-400">Fill out the required medical history and documentation securely online.</p>
-                </div>
-                <div class="bg-darkBg p-6 rounded-xl border border-steelBorder space-y-3">
-                    <span class="text-blue-400 font-black text-xl">03</span>
-                    <h3 class="text-lg font-bold text-chromeBright uppercase">Consult & Ship</h3>
-                    <p class="text-sm text-gray-400">Review with a licensed clinician and have your prescription shipped directly.</p>
+                    <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" class="w-full py-3 rounded-xl bg-gray-800 hover:bg-blue-600 text-white font-medium text-sm transition-colors text-center">
+                        Select Protocol
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <div class="pt-4 text-center">
-                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" target="_blank" rel="noopener noreferrer" class="inline-block bg-accentBlue hover:bg-accentHover text-white font-bold px-8 py-4 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-blue-950/50 border border-blue-500/30">
-                    Start Intake Portal
-                </a>
+        <!-- Men's Health Section -->
+        <div id="mens-health" class="space-y-8 scroll-mt-28">
+            <div class="border-b border-gray-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Men's Health</h2>
+                <p class="text-sm text-gray-400 mt-1">Hormonal optimization and comprehensive metabolic vitality programs.</p>
             </div>
-        </section>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 2 -->
+                <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500/50 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 text-xs font-semibold">Hormone Optimization</span>
+                            <!-- Updated price string to "Starting at" -->
+                            <span class="text-lg font-bold text-white">Starting at $120<span class="text-xs text-gray-400 font-normal">/mo</span></span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">TRT Comprehensive Care</h3>
+                        <p class="text-sm text-gray-400 mb-6">Full clinician-guided testosterone replacement therapy including labs, ancillary control, and ongoing monitoring.</p>
+                    </div>
+                    <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" class="w-full py-3 rounded-xl bg-gray-800 hover:bg-blue-600 text-white font-medium text-sm transition-colors text-center">
+                        Select Protocol
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hairloss treatment Section -->
+        <div id="hairloss" class="space-y-8 scroll-mt-28">
+            <div class="border-b border-gray-800 pb-4">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Hairloss treatment</h2>
+                <p class="text-sm text-gray-400 mt-1">Targeted follicular density, retention, and DHT management protocols.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 3 -->
+                <div class="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500/50 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Follicular Defense</span>
+                            <!-- Updated price string to "Starting at" -->
+                            <span class="text-lg font-bold text-white">Starting at $29<span class="text-xs text-gray-400 font-normal">/mo</span></span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Advanced Hair Restoration Stack</h3>
+                        <p class="text-sm text-gray-400 mb-6">Prescription-grade blockers and growth catalysts formulated to halt miniaturization and maximize density.</p>
+                    </div>
+                    <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" class="w-full py-3 rounded-xl bg-gray-800 hover:bg-blue-600 text-white font-medium text-sm transition-colors text-center">
+                        Select Protocol
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to order Section -->
+        <div id="how-to-order" class="space-y-8 pt-12 border-t border-gray-800/80 scroll-mt-28">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3">How to order</h2>
+                <p class="text-sm text-gray-400">Simple, secure, and fully remote clinical intake process.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900/30 border border-gray-800/80 rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 border border-blue-500/20">1</div>
+                    <h3 class="font-semibold text-white mb-2">Select Your Protocol</h3>
+                    <p class="text-sm text-gray-400">Choose your desired treatment path directly through our catalog above.</p>
+                </div>
+                <div class="bg-gray-900/30 border border-gray-800/80 rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 border border-blue-500/20">2</div>
+                    <h3 class="font-semibold text-white mb-2">Complete Intake</h3>
+                    <p class="text-sm text-gray-400">Fill out your medical history securely on our partner portal via VitaRelay.</p>
+                </div>
+                <div class="bg-gray-900/30 border border-gray-800/80 rounded-2xl p-6 text-center">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 border border-blue-500/20">3</div>
+                    <h3 class="font-semibold text-white mb-2">Direct Delivery</h3>
+                    <p class="text-sm text-gray-400">Clinician review and direct doorstep delivery of your targeted protocol.</p>
+                </div>
+            </div>
+        </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-darkBg border-t border-steelBorder mt-20 py-12 text-center space-y-4">
-        <p class="text-sm tracking-widest font-bold text-chromeBright uppercase">STRENGTH. HEALTH. PERFORMANCE.</p>
-        <p class="text-xs text-gray-500">&copy; 2026 PlatinumBodyRx. All rights reserved.</p>
+    <footer class="border-t border-gray-800 bg-[#090c14] py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <span class="text-base font-bold tracking-wider text-white">PLATINUM<span class="text-blue-500">BODY</span>RX</span>
+                <p class="text-xs text-gray-500 mt-1">© 2026 PlatinumBodyRx. All rights reserved.</p>
+            </div>
+            <div class="flex items-center gap-6 text-sm text-gray-400">
+                <a href="https://vitarelay.com/register/patient?clinic=3a100e9ca1" class="hover:text-white transition-colors">Patient Portal</a>
+                <a href="#catalog" class="hover:text-white transition-colors">Catalog</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
+    <!-- Simple script for mobile menu toggle -->
     <script>
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const links = document.querySelectorAll('.mobile-link');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        links.forEach(link => {
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+                mobileMenu.classList.add('hidden');
             });
         });
     </script>
